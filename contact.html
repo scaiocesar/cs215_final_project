@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Soccer &mdash; Website by Colorlib</title>
+ <title>American Thunder Soccer Team</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -27,6 +27,31 @@
 
   <link rel="stylesheet" href="css/style.css">
 
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVjZHZGJk-8wcL4AYwJMnZxBym8prZB_Y&callback=initMap" async defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+  <script>
+    let map;
+  
+    function initMap() {
+      // Set the latitude and longitude coordinates for your location
+      const location = { lat: 40.7712, lng: -111.9002 }; // Example coordinates for New York, NY
+  
+      // Create a map centered at the specified location
+      map = new google.maps.Map(document.getElementById('google-map'), {
+        center: location,
+        zoom: 10, // Adjust the zoom level as needed
+      });
+  
+      // Create a marker for the location
+      const marker = new google.maps.Marker({
+        position: location,
+        map: map,
+        title: 'American Thunder Soccer Team',
+      });
+    }
+  </script>
 
 
 </head>
@@ -110,18 +135,19 @@
             
             <ul class="list-unstyled">
               <li class="mb-2">
+                <div id="google-map" style="height: 400px;"></div>
                 <strong class="text-white d-block">Address</strong>
-                273 South Riverview Rd. <br> New York, NY 10011
+                95 N 300 W, <br> Salt Lake City, UT 84101
               </li>
               <li class="mb-2">
                 <strong class="text-white d-block">Email</strong>
-                <a href="#">info@unslate.co</a>
+                <a href="#">info@americanthunder.com</a>
               </li>
               <li class="mb-2">
                 <strong class="text-white d-block">
                   Phone
                 </strong>
-                <a href="#">+12 345 6789 012</a>
+                <a href="#"> (801) 524-8100</a>
               </li>
             </ul>
           </div>
@@ -170,17 +196,18 @@
             </div>
           </div>
 
-          <div class="col-lg-3">
-            <div class="widget mb-3">
-              <h3>Social</h3>
-              <ul class="list-unstyled links">
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Youtube</a></li>
-              </ul>
-            </div>
-          </div>
+<div class="col-lg-3">
+  <div class="widget mb-3">
+    <h3>Social</h3>
+    <ul class="list-unstyled social-icons">
+      <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i> Twitter</a></li>
+      <li><a href="https://facebook.com"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+      <li><a href="https://instagram.com"><i class="fab fa-instagram"></i> Instagram</a></li>
+      <li><a href="http://youtube.com"><i class="fab fa-youtube"></i> Youtube</a></li>
+    </ul>
+  </div>
+</div>
+
 
         </div>
 
@@ -192,8 +219,7 @@
                 Copyright &copy;
                 <script>
                   document.write(new Date().getFullYear());
-                </script> All rights reserved | This template is made with <i class="icon-heart"
-                  aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                </script>  All rights reserved | American Thunder Soccer Team.
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
               </p>
             </div>

@@ -253,7 +253,7 @@ jQuery(document).ready(function($) {
 
 	var siteCountDown = function() {
 
-		$('#date-countdown, #date-countdown2').countdown('2033/10/10', function(event) {
+		$('#date-countdown, #date-countdown2').countdown('2023/12/30', function(event) {
 		  var $this = $(this).html(event.strftime(''
 		    + '<span class="countdown-block"><span class="label">%w</span> weeks </span>'
 		    + '<span class="countdown-block"><span class="label">%d</span> days </span>'
@@ -322,3 +322,19 @@ jQuery(document).ready(function($) {
 	});
 
 });
+
+
+
+// Function to show the popup
+function openPopup() {
+	document.getElementById("membership-popup").style.display = "block";
+  }
+  
+  // Function to close the popup
+  function closePopup() {
+	document.getElementById("membership-popup").style.display = "none";
+  }
+  
+  // Show the popup when the page loads (you can trigger this event in response to a user action)
+  window.onload = openPopup;
+  
